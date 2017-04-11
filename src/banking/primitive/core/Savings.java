@@ -30,7 +30,7 @@ public class Savings extends Account {
 	 * An account whose balance dips below 0 is in an OVERDRAWN state
 	 */
 	public boolean withdraw(float amount) {
-		if (getState() == State.OPEN && amount > 0.0f) {
+		if (getState() == State.OPEN && (balance - amount) >= 0.0f) { //bug where they can withdraw more than they have
 			balance = balance - amount;
 			numWithdraws++;
 			if (numWithdraws > 3)
