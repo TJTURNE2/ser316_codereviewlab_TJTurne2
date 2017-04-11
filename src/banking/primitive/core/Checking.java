@@ -4,9 +4,10 @@ public class Checking extends Account {
 
 	private static final long serialVersionUID = 11L;
 	private int numWithdraws = 0;
-	
+	private String accountType;
 	private Checking(String name) {
 		super(name);
+		accountType = "Checking";
 	}
 
     public static Checking createChecking(String name) {
@@ -15,6 +16,7 @@ public class Checking extends Account {
 
 	public Checking(String name, float balance) {
 		super(name, balance);
+		accountType = "Checking";
 	}
 
 	/**
@@ -53,7 +55,7 @@ public class Checking extends Account {
 		return false;
 	}
 
-	public String getType() { return "Checking"; }
+	public String getType() { return accountType; }
 	
 	public String toString() {
 		return "Checking: " + getName() + ": " + getBalance();
