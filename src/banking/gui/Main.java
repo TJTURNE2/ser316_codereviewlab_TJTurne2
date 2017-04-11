@@ -1,3 +1,10 @@
+/*
+  File:Main.java	
+  Author:Terry Turner	
+  Date:	4/10/2017
+  
+  Description: Main Java file for running the main Jframe class
+*/
 package banking.gui;
 
 import javax.swing.JFrame;
